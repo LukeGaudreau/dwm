@@ -1,0 +1,11 @@
+--- dwm.c
++++ dwm.c
+@@ -1762,6 +1938,8 @@ setup(void)
+ 	scheme[SchemeSel].border = drw_clr_create(drw, selbordercolor);
+ 	scheme[SchemeSel].bg = drw_clr_create(drw, selbgcolor);
+ 	scheme[SchemeSel].fg = drw_clr_create(drw, selfgcolor);
++	/* init system tray */
++	updatesystray();
+ 	/* init bars */
+ 	updatebars();
+ 	updatestatus();
