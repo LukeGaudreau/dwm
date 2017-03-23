@@ -47,7 +47,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -71,12 +71,17 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-p", "run:", "-m", dmenumon, "-fn", dmenufont, "-nb", colors[0][2], "-nf", colors[0][1], "-sb", colors[1][2], "-sf", colors[1][1], NULL };
 static const char *passcmd[] = { "passmenu", "-p", "pass:", "-m", dmenumon, "-fn", dmenufont, "-nb", colors[0][2], "-nf", colors[0][1], "-sb", colors[1][2], "-sf", colors[1][1], NULL };
-static const char *termcmd[]  = { "gnome-terminal", NULL };
+static const char *termcmd[]  = { "termite", NULL };
+static const char *mailcmd[]  = { "termite", "-e", "mutt", "-t", "mutt", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = passcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mailcmd } },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("google-chrome-stable") },
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot-selection") },
 	{ 0,             XF86XK_AudioLowerVolume,  spawn,          SHCMD("pamixer -d 10") },
 	{ 0,             XF86XK_AudioMute,         spawn,          SHCMD("pamixer -t") },
 	{ 0,             XF86XK_AudioRaiseVolume,  spawn,          SHCMD("pamixer -i 10") },
