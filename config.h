@@ -80,6 +80,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = passcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mailcmd } },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("google-chrome-stable") },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot-selection") },
