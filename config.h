@@ -11,17 +11,17 @@ static const char dmenufont[]       = "Clear Sans:size=11";
 #define NUMCOLORS         9
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
   // border   foreground background
-  { "#212121", "#696969", "#121212" }, // 0 = normal
-  { "#696969", "#E0E0E0", "#121212" }, // 1 = selected
-  { "#212121", "#CF4F88", "#121212" }, // 2 = red
-  { "#212121", "#53A6A6", "#121212" }, // 3 = green
-  { "#212121", "#914E89", "#121212" }, // 4 = yellow
-  { "#212121", "#4779B3", "#121212" }, // 5 = blue
-  { "#212121", "#47959E", "#121212" }, // 6 = cyan
-  { "#212121", "#7E62B3", "#121212" }, // 7 = magenta
-  { "#212121", "#899CA1", "#121212" }, // 8 = grey
+  { "#222222", "#687080", "#222222" }, // 0 = normal
+  { "#687080", "#E0E0E0", "#222222" }, // 1 = selected
+  { "#282C34", "#FF6C6B", "#222222" }, // 2 = red
+  { "#282C34", "#98BE65", "#222222" }, // 3 = green
+  { "#282C34", "#914E89", "#222222" }, // 4 = yellow
+  { "#282C34", "#589CD3", "#222222" }, // 5 = blue
+  { "#282C34", "#0088CC", "#222222" }, // 6 = cyan
+  { "#282C34", "#7E62B3", "#222222" }, // 7 = magenta
+  { "#282C34", "#899CA1", "#222222" }, // 8 = grey
 };
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
