@@ -31,7 +31,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 
 /* tagging */
-static const char *tags[] = { "base", "web", "code", "gtd", "vm", "office", "art", "play", "test" };
+static const char *tags[] = { "base", "web", "org", "mail", "vm", "office", "art", "play", "test" };
 
 static const Rule rules[] = {
 	/* xprop(1):
