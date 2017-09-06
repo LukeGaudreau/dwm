@@ -12,7 +12,7 @@ static const char dmenufont[]       = "Clear Sans:size=11";
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
   // border   foreground background
   { "#222222", "#687080", "#222222" }, // 0 = normal
-  { "#687080", "#E0E0E0", "#222222" }, // 1 = selected
+  { "#589CD3", "#E0E0E0", "#222222" }, // 1 = selected
   { "#282C34", "#FF6C6B", "#222222" }, // 2 = red
   { "#282C34", "#98BE65", "#222222" }, // 3 = green
   { "#282C34", "#914E89", "#222222" }, // 4 = yellow
@@ -23,6 +23,7 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
 };
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int gappx     = 10;       /* gap pixel between windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
