@@ -4,10 +4,10 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Ubuntu:size=11",
-	"FontAwesome:size=12"
+	"Ubuntu Mono:size=12",
+	"FontAwesome:size=11"
 };
-static const char dmenufont[]       = "Ubuntu:size=11";
+static const char dmenufont[]       = "Ubuntu Mono:size=12";
 #define NUMCOLORS         9
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
   // border   foreground background
