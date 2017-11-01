@@ -32,21 +32,23 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 
 /* tagging */
-static const char *tags[] = { "base", "web", "org", "mail", "vm", "office", "art", "play", "test" };
+static const char *tags[] = { "base", "web", "code", "org", "mail", "office", "play", "test", "misc" };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-  { "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
-  { "Chromium", NULL,       NULL,       1 << 1,       0,           -1 },
-  { NULL,      "emacs-org", NULL,       1 << 2,       0,           -1 },
-  { NULL,      "emacs-twitter", NULL,   1 << 1,       0,           -1 },
-  { NULL,      "emacs-elfeed", NULL,    1 << 1,       0,           -1 },
-  { NULL,      "emacs-notmuch", NULL,   1 << 3,       0,           -1 },
-  { "spotify",  NULL,       NULL,       1 << 7,       0,           -1 },
+	/* class      instance        title       tags mask     isfloating   monitor */
+	{ "Firefox",  "Navigator",    NULL,       1 << 1,       0,           -1 },
+	{ "Firefox",  "Devtools",     NULL,       1 << 1,       0,            1 },
+	{ "Chromium", NULL,           NULL,       1 << 1,       0,           -1 },
+	{ NULL,       NULL,      "- emacs",       1 << 2,       0,           -1 },
+	{ NULL,      "emacs-org",     NULL,       1 << 3,       0,           -1 },
+	{ NULL,      "emacs-twitter", NULL,       1 << 1,       0,           -1 },
+	{ NULL,      "emacs-elfeed",  NULL,       1 << 1,       0,           -1 },
+	{ NULL,      "emacs-notmuch", NULL,       1 << 4,       0,           -1 },
+	{ "Spotify",  NULL,           NULL,       1 << 6,       0,            1 },
 };
 
 /* layout(s) */
