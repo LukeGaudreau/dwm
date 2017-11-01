@@ -21,7 +21,7 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
   { "#282C34", "#6c71c4", "#002b36" }, // 7 = magenta
   { "#282C34", "#cb4b16", "#002b36" }, // 8 = grey
 };
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;      /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 10;       /* gap pixel between windows */
 static const int showbar            = 1;        /* 0 means no bar */
