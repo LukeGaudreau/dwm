@@ -11,15 +11,15 @@ static const char dmenufont[]       = "Ubuntu Mono:size=12";
 #define NUMCOLORS         9
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
   // border   foreground background
-  { "#222222", "#687080", "#222222" }, // 0 = normal
-  { "#589CD3", "#E0E0E0", "#222222" }, // 1 = selected
-  { "#282C34", "#FF6C6B", "#222222" }, // 2 = red
-  { "#282C34", "#98BE65", "#222222" }, // 3 = green
-  { "#282C34", "#914E89", "#222222" }, // 4 = yellow
-  { "#282C34", "#589CD3", "#222222" }, // 5 = blue
-  { "#282C34", "#0088CC", "#222222" }, // 6 = cyan
-  { "#282C34", "#7E62B3", "#222222" }, // 7 = magenta
-  { "#282C34", "#899CA1", "#222222" }, // 8 = grey
+  { "#93A1A1", "#839496", "#002b36" }, // 0 = normal
+  { "#268bd2", "#fdf6e3", "#073642" }, // 1 = selected
+  { "#282C34", "#dc322f", "#002b36" }, // 2 = red
+  { "#282C34", "#859900", "#002b36" }, // 3 = green
+  { "#282C34", "#b58900", "#002b36" }, // 4 = yellow
+  { "#282C34", "#268bd2", "#002b36" }, // 5 = blue
+  { "#282C34", "#2aa198", "#002b36" }, // 6 = cyan
+  { "#282C34", "#6c71c4", "#002b36" }, // 7 = magenta
+  { "#282C34", "#cb4b16", "#002b36" }, // 8 = grey
 };
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
