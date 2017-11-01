@@ -78,20 +78,21 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", "run:", "-m", dmenumon, "-fn", dmenufont, "-nb", colors[0][2], "-nf", colors[0][1], "-sb", colors[1][2], "-sf", colors[1][1], NULL };
-static const char *passcmd[] = { "passmenu", "-p", "pass:", "-m", dmenumon, "-fn", dmenufont, "-nb", colors[0][2], "-nf", colors[0][1], "-sb", colors[1][2], "-sf", colors[1][1], NULL };
+static const char *dmenucmd[] = {"rofi", "-show", "run" };
+static const char *passcmd[] = { "pass_launcher" };
+static const char *displaycmd[] = { "display_menu" };
 static const char *termcmd[]  = { "st", NULL };
-static const char *mailcmd[]  = { "termite", "-e", "mutt", "-t", "mutt", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = passcmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = displaycmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("emacs-notmuch")},
-	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacsclient -c -n -e '(switch-to-buffer nil)'") },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacs-code") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("firefox") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("emacs-org") },
-  { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("emacs-elfeed") },
+        { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("emacs-elfeed") },
 	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("emacs-twitter") },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("screenshot-selection") },
