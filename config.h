@@ -90,6 +90,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = passcmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = displaycmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_slash,  spawn,          SHCMD("agenda")},
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("emacs-notmuch")},
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacs-code") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("qutebrowser") },
