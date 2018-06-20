@@ -5,7 +5,8 @@
 /* appearance */
 static const char *fonts[] = {
 	"Roboto Condensed:size=11",
-	"FontAwesome:size=11"
+	"FontAwesome:size=11",
+  "Symbola:size=11"
 };
 static const char dmenufont[]       = "Roboto Condensed:size=11";
 #define NUMCOLORS         9
