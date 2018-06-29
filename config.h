@@ -96,6 +96,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("flameshot gui") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot full -c -p ~/Pictures/") },
+	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("vpn toggle") },
 	{ 0,             XF86XK_MonBrightnessDown, spawn,          SHCMD("brightnessctl -q s 10%-") },
 	{ 0,             XF86XK_MonBrightnessUp,   spawn,          SHCMD("brightnessctl -q s +10%") },
 	{ ShiftMask,     XF86XK_MonBrightnessUp,   spawn,          SHCMD("brightnessctl -q s 100%") },
