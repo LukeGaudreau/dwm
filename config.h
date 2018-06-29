@@ -29,7 +29,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "base", "web", "code", "org", "mail", "office", "play", "test", "misc" };
+static const char *tags[] = { "base", "web", "code", "org", "slack", "create", "play", "test", "misc" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -41,12 +41,11 @@ static const Rule rules[] = {
 	{ "Firefox",  "Devtools",     NULL,       1 << 1,       0,            1 },
 	{ "qutebrowser",  NULL,       NULL,       1 << 1,       0,            1 },
 	{ "Chromium", NULL,           NULL,       1 << 1,       0,           -1 },
-	{ NULL,       NULL,      "- emacs",       1 << 2,       0,           -1 },
-	{ NULL,      "emacs-org",     NULL,       1 << 3,       0,           -1 },
-	{ NULL,      "emacs-twitter", NULL,       1 << 1,       0,           -1 },
-	{ NULL,      "emacs-elfeed",  NULL,       1 << 1,       0,           -1 },
-	{ NULL,      "emacs-notmuch", NULL,       1 << 4,       0,           -1 },
+	{ NULL,       NULL,           "- Org",    1 << 3,       0,           -1 },
+	{ NULL,       NULL,           "- Code",   1 << 2,       0,           -1 },
+	{ "Slack",    NULL,           NULL,       1 << 4,       0,           -1 },
 	{ "Spotify",  NULL,           NULL,       1 << 6,       0,            1 },
+	{ "Remmina",  NULL,           NULL,       1 << 7,       0,            1 },
 };
 
 /* layout(s) */
