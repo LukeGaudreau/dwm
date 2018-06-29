@@ -4,11 +4,11 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Roboto Condensed:size=11",
+	"Iosevka:size=11",
 	"FontAwesome:size=11",
   "Symbola:size=11"
 };
-static const char dmenufont[]       = "Roboto Condensed:size=11";
+static const char dmenufont[]       = "Iosevka:size=11";
 #define NUMCOLORS         9
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
   // border   foreground background
