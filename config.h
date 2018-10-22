@@ -8,19 +8,12 @@ static const char *fonts[] = {
   "icomoon:size=11"
 };
 static const char dmenufont[]       = "Iosevka:size=11";
-#define NUMCOLORS         9
-static const char colors[NUMCOLORS][MAXCOLORS][9] = {
-  // border   foreground background
-  { "#93A1A1", "#839496", "#002b36" }, // 0 = normal
-  { "#268bd2", "#fdf6e3", "#073642" }, // 1 = selected
-  { "#282C34", "#dc322f", "#002b36" }, // 2 = red
-  { "#282C34", "#859900", "#002b36" }, // 3 = green
-  { "#282C34", "#b58900", "#002b36" }, // 4 = yellow
-  { "#282C34", "#268bd2", "#002b36" }, // 5 = blue
-  { "#282C34", "#2aa198", "#002b36" }, // 6 = cyan
-  { "#282C34", "#6c71c4", "#002b36" }, // 7 = magenta
-  { "#282C34", "#cb4b16", "#002b36" }, // 8 = grey
-};
+static const char normbordercolor[] = "#abacae";
+static const char normbgcolor[]     = "#1a1a1a";
+static const char normfgcolor[]     = "#abacae";
+static const char selbordercolor[]  = "#3689e6";
+static const char selbgcolor[]      = "#1a1a1a";
+static const char selfgcolor[]      = "#fafafa";
 static const unsigned int borderpx  = 4;      /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 20;       /* gap pixel between windows */
