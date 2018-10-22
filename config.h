@@ -35,6 +35,7 @@ static const Rule rules[] = {
 	{ "qutebrowser",  NULL,       NULL,       1 << 1,       0,         0,            1 },
 	{ "Chromium", NULL,           NULL,       1 << 1,       0,         0,           -1 },
 	{ NULL,       NULL,           "TODO",          0,       1,         1,           -1 },
+	{ NULL,       NULL,           "Agenda",        0,       1,         1,           -1 },
 	{ NULL,       NULL,           "- Org",    1 << 3,       0,         0,           -1 },
 	{ NULL,       NULL,           "- Code",   1 << 2,       0,         0,           -1 },
 	{ NULL,       NULL,           "- Spacemacs",   1 << 2,       0,         0,      -1 },
