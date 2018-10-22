@@ -4,9 +4,8 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"Iosevka:size=11",
-	"FontAwesome:size=11",
-  "Symbola:size=11"
+	"San Francisco Display:size=11",
+  "icomoon:size=11"
 };
 static const char dmenufont[]       = "Iosevka:size=11";
 #define NUMCOLORS         9
@@ -29,7 +28,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "base", "web", "code", "org", "slack", "create", "play", "test", "misc" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -57,9 +56,9 @@ static const int resizehints = 0;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	{ "",      monocle },
 	{ "TTT",      bstack },
 	{ "===",      bstackhoriz },
 };
