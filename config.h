@@ -36,16 +36,18 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance        title       tags mask     isfloating   monitor */
-	{ "Firefox",  "Navigator",    NULL,       1 << 1,       0,           -1 },
-	{ "Firefox",  "Devtools",     NULL,       1 << 1,       0,            1 },
-	{ "qutebrowser",  NULL,       NULL,       1 << 1,       0,            1 },
-	{ "Chromium", NULL,           NULL,       1 << 1,       0,           -1 },
-	{ NULL,       NULL,           "- Org",    1 << 3,       0,           -1 },
-	{ NULL,       NULL,           "- Code",   1 << 2,       0,           -1 },
-	{ "Slack",    NULL,           NULL,       1 << 4,       0,           -1 },
-	{ "Spotify",  NULL,           NULL,       1 << 6,       0,            1 },
-	{ "Remmina",  NULL,           NULL,       1 << 7,       0,            1 },
+	/* class      instance        title       tags mask     iscentered isfloating   monitor */
+	{ "Firefox",  "Navigator",    NULL,       1 << 1,       0,         0,           -1 },
+	{ "Firefox",  "Devtools",     NULL,       1 << 1,       0,         0,            1 },
+	{ "qutebrowser",  NULL,       NULL,       1 << 1,       0,         0,            1 },
+	{ "Chromium", NULL,           NULL,       1 << 1,       0,         0,           -1 },
+	{ NULL,       NULL,           "TODO",          0,       1,         1,           -1 },
+	{ NULL,       NULL,           "- Org",    1 << 3,       0,         0,           -1 },
+	{ NULL,       NULL,           "- Code",   1 << 2,       0,         0,           -1 },
+	{ NULL,       NULL,           "- Spacemacs",   1 << 2,       0,         0,      -1 },
+	{ "Slack",    NULL,           NULL,       1 << 4,       0,         0,            1 },
+	{ "Spotify",  NULL,           NULL,       1 << 6,       0,         0,            1 },
+	{ "Remmina",  NULL,           NULL,       1 << 7,       0,         0,            1 },
 };
 
 /* layout(s) */
