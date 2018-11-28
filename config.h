@@ -4,7 +4,7 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"San Francisco Display:size=11",
+	"SF Pro Display:size=11",
   "icomoon:size=11"
 };
 static const char dmenufont[]       = "Iosevka:size=11";
