@@ -71,7 +71,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {"rofi", "-show", "drun" };
+static const char *appmenucmd[] = {"rofi", "-show", "drun" };
+static const char *dmenucmd[] = {"rofi", "-show", "run" };
+static const char *sshmenucmd[] = {"rofi", "-show", "ssh" };
+static const char *winmenucmd[] = {"rofi", "-show", "window" };
 static const char *passcmd[] = { "pass_launcher" };
 static const char *displaycmd[] = { "display_menu" };
 static const char *termcmd[]  = { "st", NULL };
@@ -82,18 +85,15 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = passcmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = displaycmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } } ,
-	{ MODKEY|ShiftMask,             XK_slash,  spawn,          SHCMD("agenda")},
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("emacs-notmuch")},
+	{ Mod1Mask|ShiftMask,           XK_Return, spawn,          {.v = sshmenucmd } } ,
+	{ MODKEY|ShiftMask,             XK_slash,  spawn,          SHCMD("emacs-agenda-popup")},
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("emacs-code") },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("qutebrowser") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("emacs-org") },
   { Mod1Mask,                     XK_space,  spawn,          {.v = capturecmd } },
-  { MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("emacs-elfeed") },
-	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("qutebrowser --target window https://mobile.twitter.com") },
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("qutebrowser --target window https://trello.com") },
+  { Mod1Mask,                     XK_Tab,    spawn,          {.v = winmenucmd } },
 	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("flameshot gui") },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot full -c -p ~/Pictures/") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("flameshot full -c -p ~/Pictures/Screenshots") },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("vpn toggle") },
 	{ 0,             XF86XK_MonBrightnessDown, spawn,          SHCMD("brightnessctl -q s 10%-") },
 	{ 0,             XF86XK_MonBrightnessUp,   spawn,          SHCMD("brightnessctl -q s +10%") },
@@ -119,12 +119,13 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
-	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} }, 
+	{ MODKEY|ShiftMask,             XK_f,      togglefloating, {0} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_o,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY,                       XK_slash,  setlayout,      {0} },
-	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_space,  spawn,          {.v = appmenucmd } },
+	{ MODKEY|ShiftMask,             XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_Left,   focusmon,       {.i = -1 } },
@@ -149,7 +150,6 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkClock,             0,              Button1,        spawn,          SHCMD("emacs-agenda-popup") },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
