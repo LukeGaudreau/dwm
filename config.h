@@ -8,13 +8,13 @@ static const char *fonts[] = {
   "icomoon:size=11"
 };
 static const char dmenufont[]       = "Iosevka:size=11";
-static const char normbordercolor[] = "#2E3440";
-static const char normbgcolor[]     = "#2E3440";
-static const char normfgcolor[]     = "#D8DEE9";
-static const char selbordercolor[]  = "#4C566A";
-static const char selbgcolor[]      = "#3B4252";
-static const char selfgcolor[]      = "#E5E9F0";
-static const unsigned int borderpx  = 4;      /* border pixel of windows */
+static const char normbordercolor[] = "#444444";
+static const char normbgcolor[]     = "#000000";
+static const char normfgcolor[]     = "#e3e0d5";
+static const char selbordercolor[]  = "#bdb3a0";
+static const char selbgcolor[]      = "#333333";
+static const char selfgcolor[]      = "#e3e0d5";
+static const unsigned int borderpx  = 2;      /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappx     = 20;       /* gap pixel between windows */
 static const int showbar            = 1;        /* 0 means no bar */
